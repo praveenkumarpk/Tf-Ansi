@@ -27,14 +27,12 @@ jobs:
       - name: Code pull
         run: |
           ls -l
+          echo "${{ssh-private-key}}" > ec2.pem && chmod 600 ec2.pem
       
       - name: ssh
         uses: webfactory/ssh-agent@v0.5.2
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        run: |
-          echo "$ssh-private-key" > ec2.pem && chmod 600 ec2.pem
-          ls -l
   
       - name: ansible    
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
