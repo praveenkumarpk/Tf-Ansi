@@ -1,0 +1,6 @@
+- name: Docker Hub Login
+  docker_login:
+    registry: docker.io
+    username: "{{ username }}"
+    password: "{{ password }}"
+    reauthorize: yes

@@ -1,0 +1,10 @@
+- name: Build and Push Role
+  docker_image:
+    build:
+      path: /var/www/html/
+      dockerfile: Dockerfile
+      pull: yes
+    source: build
+    push: yes
+    name: maskmafia/pycicd
+    tag: v3

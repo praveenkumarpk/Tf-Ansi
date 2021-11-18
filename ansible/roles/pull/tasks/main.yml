@@ -1,0 +1,4 @@
+- name: image pull
+  docker_image:
+    name: maskmafia/pycicd
+    source: pull
