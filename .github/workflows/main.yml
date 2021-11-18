@@ -25,10 +25,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
+      - name: ssh
       uses: webfactory/ssh-agent@v0.5.2
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           
+      - name: ansible    
       uses: saubermacherag/ansible-playbook-docker-action@v1.4
         with:
           playbookName: 'site.yml'
