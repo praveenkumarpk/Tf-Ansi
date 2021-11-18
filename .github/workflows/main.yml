@@ -32,6 +32,11 @@ jobs:
           pip install python-docker
           pip install docker-py
           pip install docker
+     
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
+        run: |
+          docker --version
 
       - name: ansible    
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
