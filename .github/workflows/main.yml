@@ -36,8 +36,8 @@ jobs:
       - name: ansible    
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
         with:
-          playbookName: 'site.yml'
-          inventoryFile: 'host.yml'
-          rolesPath: ".ansible/playbooks/roles"
-          keyFile: ".ansible/random-ssh-key.pem"
+          playbookName: './ansible/site.yml'
+          inventoryFile: './ansible/host.yml'
+          rolesPath: "./ansible/playbooks/roles"
+          keyFile: "./ansible/random-ssh-key.pem"
           verbosity: "vv"
