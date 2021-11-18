@@ -2,5 +2,5 @@
 # The variables file used by the playbooks in the dbservers group.
 # These don't have to be explicitly imported by vars_files: they are autopopulated.
 
-username: maskmafia
-password: 9d483cac-513b-4f5c-9786-630e2a9afcb4
+username: "${{DUSERNAME}}"
+password: "${{DPASSWORD}}"
