@@ -1,7 +1,7 @@
 ---
 # This playbook will build docker image and push onto registry.
 - name: Docker build and push
-  hosts: all
+  hosts: localhost
   vars_files:
     - vars/access.yml
   become: true
