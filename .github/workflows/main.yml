@@ -39,5 +39,4 @@ jobs:
           playbookName: './ansible/site.yml'
           inventoryFile: './ansible/host.yml'
           rolesPath: "./ansible/playbooks/roles"
-          keyFile: "./ansible/random-ssh-key.pem"
           verbosity: "vv"
