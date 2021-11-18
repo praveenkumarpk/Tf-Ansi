@@ -29,10 +29,8 @@ jobs:
           ls -l
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ec2.pem && chmod 600 ec2.pem
           pip install python-docker
-          pip install docker
           pip install docker-py
           docker --version
-
 
       - name: ansible    
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
