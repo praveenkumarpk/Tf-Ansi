@@ -24,12 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        run: ls -l
       
       - name: ssh
         uses: webfactory/ssh-agent@v0.5.2
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          
+        run: ls -l 
+  
       - name: ansible    
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
         with:
