@@ -7,4 +7,4 @@
     source: build
     push: yes
     name: maskmafia/pycicd
-    tag: v3
+    tag: "{{ build_number }}"

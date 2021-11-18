@@ -37,3 +37,4 @@ jobs:
           rolesPath: "./ansible/playbooks/roles"
           keyFile: "ec2.pem"
           verbosity: "vv"
+          extraVars: "-e build_number=${{ github.run_id }}"
