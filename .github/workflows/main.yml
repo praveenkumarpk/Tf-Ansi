@@ -27,7 +27,7 @@ jobs:
       - name: Code pull
         run: |
           ls -l
-          echo "${{ssh-private-key}}" > ec2.pem && chmod 600 ec2.pem
+          echo "${{secrets.SSH_PRIVATE_KEY}}" > ec2.pem && chmod 600 ec2.pem
       
       - name: ssh
         uses: webfactory/ssh-agent@v0.5.2
