@@ -32,10 +32,9 @@ jobs:
           pip install python-docker
           pip install docker-py
           pip install docker
+          docker images
      
-
       - name: ansible
-        uses: mr-smithers-excellent/docker-build-push@v5
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
         with:
           playbookName: './ansible/site.yml'
