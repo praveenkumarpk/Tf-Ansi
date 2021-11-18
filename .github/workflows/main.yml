@@ -31,8 +31,7 @@ jobs:
           docker --version
           pip install python-docker
           pip install docker-py
-          apt-get install docker.io
-          docker --version
+          pip install docker
 
       - name: ansible    
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
