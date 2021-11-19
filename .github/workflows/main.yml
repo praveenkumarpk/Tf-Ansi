@@ -34,6 +34,7 @@ jobs:
           pip install docker-py
           pip install docker
           docker images
+          ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
       
       - name: ansible
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
