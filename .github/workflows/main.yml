@@ -19,6 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-18.04
+    container:
+      image: lucasalt/act_base:latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,10 +29,6 @@ jobs:
       - name: Code pull
         run: |
           ls -l
-          echo "${{secrets.SSH_PRIVATE_KEY}}" > ec2.pem && chmod 600 ec2.pem
-          docker --version
-          sudo apt-get update
-          sudo apt-get install docker.io
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
       
       - name: ansible
