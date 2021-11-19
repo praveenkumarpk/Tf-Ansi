@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -33,6 +33,7 @@ jobs:
           pip install python-docker
           pip install docker-py
           pip install docker
+          sudo apt-get update -y
           sudo apt-get install -y docker.io 
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
       
