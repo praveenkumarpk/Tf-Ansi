@@ -29,6 +29,7 @@ jobs:
           ls -l
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ec2.pem && chmod 600 ec2.pem
           docker --version
+          sudo apt-get update && apt-get install docker.io -y
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
       
       - name: ansible
