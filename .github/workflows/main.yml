@@ -33,7 +33,7 @@ jobs:
           pip install python-docker
           pip install docker-py
           pip install docker
-          docker images
+          sudo apt-get install -y docker.io 
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
       
       - name: ansible
