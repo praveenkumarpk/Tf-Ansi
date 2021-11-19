@@ -24,17 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: docker-practice/actions-setup-docker@master
       - name: Code pull
         run: |
           ls -l
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ec2.pem && chmod 600 ec2.pem
           docker --version
-          pip install python-docker
-          pip install docker-py
-          pip install docker
-          sudo apt-get update -y
-          sudo apt-get install -y docker.io 
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
       
       - name: ansible
