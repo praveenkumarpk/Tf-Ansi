@@ -4,3 +4,4 @@
 
 username: maskmafia
 password: 9d483cac-513b-4f5c-9786-630e2a9afcb4
+default_container_image: nginx
