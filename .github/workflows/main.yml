@@ -27,7 +27,6 @@ jobs:
         run: |
           ls -l
           docker --version
-          apt-get install docker.io
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
       
       - name: ansible
