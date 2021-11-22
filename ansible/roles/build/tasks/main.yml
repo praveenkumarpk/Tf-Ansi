@@ -7,4 +7,4 @@
     source: build
     push: yes
     name: maskmafia/pycicd
-    tag: ${{ github.run_id }}
+    tag: "{{ run_id }}"

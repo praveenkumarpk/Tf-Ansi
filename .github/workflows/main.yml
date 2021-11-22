@@ -26,7 +26,7 @@ jobs:
         run: |
           ls -l
           docker --version
-          ansible-playbook -i ./ansible/host.yml ./ansible/site.yml
+          ansible-playbook -i ./ansible/host.yml ./ansible/site.yml -e "${{ github.run_id }}=run_id"
       
       - name: ansible
         uses: saubermacherag/ansible-playbook-docker-action@v1.4
