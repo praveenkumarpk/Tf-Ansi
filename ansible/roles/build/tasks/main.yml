@@ -1,7 +1,7 @@
 - name: Build and Push Role
   docker_image:
     build:
-      path: /var/www/html/
+      path: ./
       dockerfile: Dockerfile
       pull: yes
     source: build
