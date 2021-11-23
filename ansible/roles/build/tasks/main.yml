@@ -1,7 +1,7 @@
 - name: Build and Push Role
   docker_image:
     build:
-      path: "{{ filepath }}+'/'"
+      path: "{{ filepath }}"
       dockerfile: Dockerfile
       pull: yes
     source: build

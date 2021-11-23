@@ -29,4 +29,4 @@ jobs:
           echo ${{ github.workspace }}
           cat ${{ github.workspace }}/Dockerfile
           echo ${{ github.run_id }}
-          ansible-playbook -i ./ansible/host.yml ./ansible/site.yml --extra-vars "run_id=${{ github.run_id }} -e filepath=${{ github.workspace }}"
+          ansible-playbook -i ./ansible/host.yml ./ansible/site.yml --extra-vars "run_id=${{ github.run_id }} -e filepath=${{ github.workspace }}/"
