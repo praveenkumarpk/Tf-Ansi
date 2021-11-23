@@ -26,7 +26,7 @@ jobs:
         run: |
           ls -l
           pwd
-          echo ${{ GITHUB_WORKSPACE }}
+          echo ${{ github.workspace }}
           echo ${{ github.run_id }}
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml --extra-vars "run_id=${{ github.run_id }}"
       
@@ -38,4 +38,4 @@ jobs:
           rolesPath: "./ansible/playbooks/roles"
           keyFile: "ec2.pem"
           verbosity: "vv"
-          extraVars: "-e build_number=${{ github.run_id }} -e filepath=${{ GITHUB_WORKSPACE }}"
+          extraVars: "-e build_number=${{ github.run_id }} -e filepath=${{ github.workspace }}"
