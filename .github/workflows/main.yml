@@ -26,7 +26,7 @@ jobs:
         run: |
           ls -l
           pwd
-          echo ${{GITHUB_WORKSPACE}}
+          echo ${{ GITHUB_WORKSPACE }}
           echo ${{ github.run_id }}
           ansible-playbook -i ./ansible/host.yml ./ansible/site.yml --extra-vars "run_id=${{ github.run_id }}"
       
